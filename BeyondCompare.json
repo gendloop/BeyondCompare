@@ -14,13 +14,14 @@
             "Push-Location \"$dir\"",
             "7z x BeyondCompare-$version\\dist\\BeyondCompare.7z",
             "Remove-Item BeyondCompare-$version -Recurse",
+            "Start-Process cmd.exe -ArgumentList \"/c AddOrRemoveContextMenu.bat Add\" -NoNewWindow -Wait",
             "Pop-Location"
         ]
     },
-    "bin": "BeyondCompare.exe",
+    "bin": "BCompare.exe",
     "shortcuts": [
         [
-            "BeyondCompare.exe",
+            "BCompare.exe",
             "BeyondCompare"
         ]
     ],
